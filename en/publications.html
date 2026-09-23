@@ -198,7 +198,7 @@
 
   /* ===== FOOTER ===== */
   footer{background:var(--navy-ink); color:rgba(255,255,255,0.6); padding:56px 0 28px;}
-  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.12);}
+  .foot-grid{display:grid; grid-template-columns:1.3fr 1fr 0.85fr 1.1fr 1fr; gap:32px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.12);}
   .foot-brand{display:flex; align-items:center; gap:12px; margin-bottom:14px;}
   .foot-brand-chip{background:var(--white); padding:5px; border-radius:2px; display:flex; align-items:center; justify-content:center;}
   .foot-brand span{font-family:'Fraunces', serif; font-weight:600; font-size:16px; color:var(--white);}
@@ -207,6 +207,11 @@
   footer ul{list-style:none;}
   footer ul li{margin-bottom:10px; font-size:14px;}
   footer ul li a:hover{color:var(--white);}
+  .foot-social-links { display: flex; flex-direction: column; gap: 10px; }
+  .foot-social-btn { display: inline-flex; align-items: center; gap: 10px; padding: 7px 12px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 4px; color: rgba(255, 255, 255, 0.85); font-size: 13px; font-weight: 500; text-decoration: none; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); width: fit-content; }
+  .foot-social-btn svg { flex-shrink: 0; transition: transform 0.2s ease; }
+  .foot-social-btn:hover { background: var(--red-ember); border-color: var(--red-ember); color: var(--white); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(214, 40, 45, 0.35); }
+  .foot-social-btn:hover svg { transform: scale(1.1); }
   .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-size:12.5px; flex-wrap:wrap; gap:10px;}
 
   /* ===== RESPONSIVE ===== */
@@ -217,6 +222,7 @@
     .prog-grid{grid-template-columns:1fr 1fr;}
     .contact-grid{grid-template-columns:1fr; gap:40px;}
     .foot-grid{grid-template-columns:1fr 1fr; gap:32px;}
+    .foot-social-links{flex-direction:row; flex-wrap:wrap;}
     .people-grid{grid-template-columns:1fr; gap:32px;}
     nav ul{position:fixed; top:66px; left:0; right:0; background:var(--white); flex-direction:column; padding:20px; gap:0; border-bottom:1px solid var(--rule); display:none;}
     nav ul.open{display:flex;}
@@ -327,11 +333,30 @@
       </div>
       <div>
         <h4>Contact</h4>
-       <ul>
-            <li><a href="#contact">ACSTF</a></li>
-            <li><a href="mailto:acstf.aceh@gmail.com">acstf.aceh@gmail.com</a></li>
-            <li><a href="mailto:juandadjamal@gmail.com">juandadjamal@gmail.com</a></li>
-          </ul>
+        <ul>
+          <li><a href="index.html#contact">Juanda Djamal</a></li>
+          <li><a href="tel:+6285371810052">+62 853-7181-0052</a></li>
+          <li><a href="mailto:juandadjamal@gmail.com">juandadjamal@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social Media</h4>
+        <div class="foot-social-links">
+          <a href="https://www.instagram.com/acstf.aceh" target="_blank" rel="noopener noreferrer" class="foot-social-btn" aria-label="Instagram ACSTF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/Achehnese-Civil-Society-Task-Force" target="_blank" rel="noopener noreferrer" class="foot-social-btn" aria-label="Facebook ACSTF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="foot-bottom">
